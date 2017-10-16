@@ -1,8 +1,8 @@
 {
   "name": "vanilla-i18n",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Translating text in a simple and easy way.",
-  "main": "index.js",
+  "main": "dist/vanilla-i18n.js",
   "scripts": {
     "build": "NODE_ENV=production BABEL_ENV=production webpack --progress"
   },
