@@ -7,9 +7,9 @@ Translating text in a simple and easy way.
 ## How to use?
 ```js
   // I18nPtBr.js
-  const vanillaI18N, {setDefaultLanguage} = require('vanilla-i18n')
+  const i18n = require('./vanilla-i18n')
 
-  vanillaI18N({
+  i18n.setTranslate({
     'myfirstname': 'Agrupador',
     'mymiddlename': 'Opção de resposta',
     'mylastname': 'Opção única',
@@ -18,14 +18,14 @@ Translating text in a simple and easy way.
     'somebody text': 'Texto resumido'
   }, 'pt')
 
-  setDefaultLanguage('pt')
+  i18n.setDefaultLanguage('pt')
 ```
 
 ```js
   // I18nEn.js
-  const vanillaI18N = require('vanilla-i18n')
+  const i18n = require('./vanilla-i18n')
 
-  vanillaI18N({
+  i18n.setTranslate({
     'myfirstname': 'My First name',
     'mymiddlename': 'My middle name',
     'mylastname': 'My Last name',
@@ -40,6 +40,7 @@ Translating text in a simple and easy way.
   const myFirstNameEn = 'myfirstname'.translate('en')
   const myFirstNamePtBr = 'myfirstname'.translate('pt')
   const myFirstNameDefault = 'myfirstname'.translate()
+
   console.log({
     en: myFirstNameEn,
     pt: myFirstNamePtBr,

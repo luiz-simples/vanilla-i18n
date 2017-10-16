@@ -42,10 +42,8 @@ Object.assign(String.prototype, {
   }
 })
 
-const setTranslate = (i18n, lang) => {
+export const setTranslate = (i18n, lang) => {
   if (!lang) lang = defaultLanguage
   if (!translate[lang]) translate[lang] = {}
   Object.assign(translate[lang], i18n)
 }
-
-export default setTranslate

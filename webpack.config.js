@@ -5,13 +5,14 @@ const main = path.join(__dirname, 'index.js')
 
 module.exports = {
   devtool: 'cheap-module-source-map',
-  target: 'web',
+  target: 'node',
 
   entry: {main: main},
 
   output: {
     path: dist,
-    filename: 'vanilla-i18n.js'
+    filename: 'vanilla-i18n.js',
+    libraryTarget: 'commonjs2'
   },
 
   module: {
