@@ -1,13 +1,31 @@
 {
   "name": "vanilla-i18n",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Translating text in a simple and easy way.",
   "main": "dist/vanilla-i18n.js",
+  "directories": {
+    "example": "example"
+  },
   "scripts": {
     "build": "NODE_ENV=production BABEL_ENV=production webpack --progress"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luiz-simples/vanilla-i18n.git"
+  },
+  "keywords": [
+    "I18N",
+    "translate",
+    "translating",
+    "vanilla",
+    "internationalization"
+  ],
   "author": "Luiz Amorim <luiz.simples@gmail.com>",
   "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/luiz-simples/vanilla-i18n/issues"
+  },
+  "homepage": "https://github.com/luiz-simples/vanilla-i18n#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
