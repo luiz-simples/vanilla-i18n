@@ -1,0 +1,29 @@
+{
+  env: { es6: true },
+  parser: "babel-eslint",
+  extends: [ "standard" ],
+  globals: {
+    describe: false,
+    beforeEach: false,
+    beforeAll: false,
+    test: false,
+    afterAll: false,
+    expect: false,
+    jest: false
+  },
+  rules: {
+    "no-throw-literal": 1,
+    "strict": [2, "never"],
+    "semi": [2, "never"],
+    "quotes": [2, "single"],
+    "no-var": 1,
+    "eol-last": 1,
+    "no-undef": "error",
+    "no-new-require": 1,
+    "no-sync": 1,
+    "no-mixed-requires": [1, false],
+    "no-unsafe-finally": 0,
+    "no-useless-computed-key": 0,
+    "standard/object-curly-even-spacing": ["error", "never"]
+  }
+}
