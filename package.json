@@ -1,6 +1,6 @@
 {
   "name": "vanilla-i18n",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Translating text in a simple and easy way.",
   "main": "dist/vanilla-i18n.js",
   "scripts": {
