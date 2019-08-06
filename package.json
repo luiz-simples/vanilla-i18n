@@ -1,13 +1,13 @@
 {
   "name": "vanilla-i18n",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Translating text in a simple and easy way.",
   "main": "dist/vanilla-i18n.js",
   "directories": {
     "example": "example"
   },
   "scripts": {
-    "build": "NODE_ENV=production BABEL_ENV=production webpack --progress"
+    "build": "webpack --progress"
   },
   "repository": {
     "type": "git",
@@ -27,19 +27,19 @@
   },
   "homepage": "https://github.com/luiz-simples/vanilla-i18n#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^8.0.2",
-    "babel-loader": "^7.1.2",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "eslint": "^4.10.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-loader": "^1.9.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-node": "^5.2.1",
-    "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "webpack": "^3.8.1"
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.1.0",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-loader": "^2.2.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "terser-webpack-plugin": "^1.4.1",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
   }
 }

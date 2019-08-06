@@ -1,17 +1,17 @@
 {
-  env: { es6: true },
-  parser: "babel-eslint",
-  extends: [ "standard" ],
-  globals: {
-    describe: false,
-    beforeEach: false,
-    beforeAll: false,
-    test: false,
-    afterAll: false,
-    expect: false,
-    jest: false
+  "env": { "es6": true },
+  "parser": "babel-eslint",
+  "extends": [ "standard" ],
+  "globals": {
+    "describe": false,
+    "beforeEach": false,
+    "beforeAll": false,
+    "test": false,
+    "afterAll": false,
+    "expect": false,
+    "jest": false
   },
-  rules: {
+  "rules": {
     "no-throw-literal": 1,
     "strict": [2, "never"],
     "semi": [2, "never"],
