@@ -4,7 +4,10 @@ i18n.setTranslate({
   'myfirstname': 'Agrupador',
   'mymiddlename': 'Opção de resposta',
   'mylastname': 'Opção única',
-  'myfullname': 'Opções múltiplas',
+  'myfullname': 'Opções múltiplas',  
+  'address': {
+    'street': '{ streetname } é minha rua'
+  },
   'othen i18n': 'Área de texto',
   'somebody text': 'Texto resumido'
 }, 'pt')
