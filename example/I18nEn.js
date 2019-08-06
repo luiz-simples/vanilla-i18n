@@ -5,6 +5,9 @@ i18n.setTranslate({
   'mymiddlename': 'My middle name',
   'mylastname': 'My Last name',
   'myfullname': 'My full name',
+  'address': {
+    'street': '{ streetname } is my street'
+  },
   'other i18n': 'Other translation',
   'somebody text': 'Other somebody texto'
 }, 'en')

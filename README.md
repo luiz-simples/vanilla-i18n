@@ -54,3 +54,43 @@ Translating text in a simple and easy way.
   require('./I18nPtBr')
   require('./code.js')
 ```
+
+using nested objects
+
+```
+  i18n.setTranslate({
+    'name': {
+      firstname: 'my first name',
+      middlename: 'my middle name',
+      lastname: 'my last name'
+    },
+    'other i18n': 'Other translation',
+    'somebody text': 'Other somebody texto'
+  }, 'en')
+
+  'name.firstname'.translate()
+  'name.middlename'.translate()
+  'name.lastname'.translate()
+```
+
+using placeholders and passing values to translate function
+
+```
+  i18n.setTranslate({
+    'name': {
+      firstname: '{firstname} is my first name',
+      middlename: 'my middle name',
+      lastname: 'my last name'
+    },
+    'other i18n': 'Other translation',
+    'somebody text': 'Other somebody texto'
+  }, 'en')
+
+  'name.firstname'.translate({firstname: 'George'})
+```
+
+passing language along with the parameters
+
+```
+'name.firstname'.translate('pt',{firstname: 'George'})
+```
