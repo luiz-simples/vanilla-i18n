@@ -8,7 +8,9 @@ module.exports = {
   target: 'node',
   mode: 'production',
 
-  entry: { main: main },
+  entry: {
+    main: main
+  },
 
   output: {
     path: dist,
@@ -20,7 +22,26 @@ module.exports = {
     rules: [{
       test: /\.(js|jsx)$/,
       exclude: /(node_modules)/,
-      use: [{ loader: 'babel-loader' }]
+      use: [{
+        loader: 'babel-loader'
+      }]
     }]
+  },
+
+  optimization: {
+    minimizer: [
+      new TerserPlugin({
+        cache: false,
+        parallel: false,
+        sourceMap: true,
+
+        terserOptions: {
+          warnings: false,
+          beautify: false,
+          comments: false,
+          sourceMap: false
+        }
+      })
+    ]
   }
 }
