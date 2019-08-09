@@ -34,9 +34,7 @@ const get = (obj, path, defaultValue) => {
 
 Object.assign(String.prototype, {
   translate: function (...args) {
-    let lang = null
-    let i18n = null
-    let values = null
+    let i18n, lang, values
 
     if (args.length > 0) {
       if (args[0] && isString(args[0])) lang = args[0]
@@ -47,8 +45,8 @@ Object.assign(String.prototype, {
     if (!lang) lang = defaultLanguage
     const languages = translate[lang] || {}
 
-    i18n = hasAttr(languages, this) ? languages[this] : null
-    const emptyI18N = i18n === null
+    if (hasAttr(languages, this)) i18n = languages[this]
+    const emptyI18N = !i18n
 
     if (emptyI18N) {
       let t = this
@@ -58,9 +56,8 @@ Object.assign(String.prototype, {
       if (withVarStr) t = t.replace(/(\[\w+])/g, '[:str]')
 
       i18n = get(languages, this, '')
-      const hasI18N = i18n !== null
 
-      if (hasI18N) {
+      if (i18n) {
         if (withVarNum) {
           withVarNum.forEach((val, index) => {
             i18n = i18n.replace(`{$${index + 1}+2}`, parseInt(val.match(/\d+/g), 10) + 2)
@@ -85,7 +82,7 @@ Object.assign(String.prototype, {
       })
     }
 
-    return i18n === null ? this : i18n
+    return i18n || this
   }
 })
 

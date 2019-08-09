@@ -15,7 +15,10 @@ module.exports = {
   output: {
     path: dist,
     filename: 'vanilla-i18n.js',
-    libraryTarget: 'commonjs2'
+    libraryTarget: 'umd',
+    library: 'lib',
+    umdNamedDefine: true,
+    globalObject: '(typeof self !== \'undefined\' ? self : this)'
   },
 
   module: {
